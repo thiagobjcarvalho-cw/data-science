@@ -1,0 +1,32 @@
+# Prova Final AEDI - UnB PPCA
+# Análise Estatística de Dados e Informações
+# Data: 23/11/2025
+
+# Core Data Science
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Machine Learning
+scikit-learn>=1.3.0
+
+# Statistical Analysis
+scipy>=1.11.0
+statsmodels>=0.14.0
+
+# Advanced ML
+xgboost>=2.0.0
+lightgbm>=4.0.0
+
+# Explainability
+shap>=0.42.0
+
+# Jupyter
+jupyter>=1.0.0
+nbconvert>=7.0.0
+
+# Data Handling
+openpyxl>=3.1.0
