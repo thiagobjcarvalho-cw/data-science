@@ -1,12 +1,16 @@
-# 🎓 Trabalho DC - Mestrado UnB (PPCA)
+# 🎓 Prova Final AEDI - Mestrado UnB (PPCA)
 
-Repositório pessoal para materiais acadêmicos do **Programa de Pós-Graduação em Computação Aplicada (PPCA)** da Universidade de Brasília.
+Repositório contendo a **Prova Final de Análise Estatística de Dados e Informações (AEDI)** do Programa de Pós-Graduação em Computação Aplicada (PPCA) da Universidade de Brasília.
 
 ---
 
 ## 📋 Sobre
 
-Este repositório contém materiais de estudo, provas e trabalhos acadêmicos relacionados às disciplinas do mestrado, com foco especial em **Análise Estatística de Dados e Informações (AEDI)**.
+Este repositório contém a resolução completa da Prova Final de AEDI (23/11/2025), incluindo:
+- ✅ 4 notebooks Jupyter completos com análises estatísticas rigorosas
+- ✅ Todos os datasets necessários
+- ✅ Scripts de execução automatizada
+- ✅ Documentação detalhada para reprodução local
 
 ---
 
@@ -54,26 +58,64 @@ trabalho-dc/
 
 ---
 
-## 🚀 Como Usar
+## 🚀 EXECUÇÃO RÁPIDA (Quick Start)
 
-### Opção 1: Resolução Automatizada com Claude Code
-
-O pacote `prova-aedi-pacote/` foi projetado para ser executado com Claude Code:
+### ⚡ Método Automatizado (Recomendado)
 
 ```bash
-# 1. Faça upload de todos os arquivos para claude.ai/code
-# 2. Execute o comando no chat:
-Leia o arquivo INSTRUCOES_CLAUDE_CODE.md e execute TUDO que está descrito lá.
-Resolva as 4 questões sequencialmente (Q1 → Q2 → Q3 → Q4).
+# 1. Clone o repositório
+git clone https://github.com/thiagobjcarvalho-cw/data-science.git
+cd data-science
+
+# 2. Configure ambiente
+python3 -m venv venv
+source venv/bin/activate  # Linux/Mac
+pip install -r requirements.txt
+
+# 3. Execute TUDO automaticamente
+./executar_prova.sh
 ```
 
-### Opção 2: Resolução Manual/Questão por Questão
+**Resultado:** 4 HTMLs prontos para entrega em `prova-aedi-unb/exports/` (~60-80 min)
+
+---
+
+### 📖 Guia Detalhado
+
+Para instruções completas, consulte: **[GUIA_EXECUCAO.md](GUIA_EXECUCAO.md)**
+
+O guia contém:
+- ✅ Instalação passo a passo
+- ✅ Detalhes de cada questão
+- ✅ Troubleshooting completo
+- ✅ Checklist final
+
+---
+
+### 🔧 Opções de Execução
+
+#### Opção 1: Script Automatizado (Mais Rápido)
 
 ```bash
-# Para cada questão (Q1, Q2, Q3, Q4):
-Leia o arquivo questoes/Q{N}_{TEMA}.md e execute TUDO.
-Crie notebook completo em notebooks/Q{N}_{Tema}.ipynb
-Exporte para HTML em exports/
+./executar_prova.sh  # Executa Q1, Q2, Q3, Q4 e gera HTMLs
+```
+
+#### Opção 2: Jupyter Interface (Interativo)
+
+```bash
+cd prova-aedi-unb/notebooks
+jupyter notebook
+# Abra e execute cada notebook manualmente
+```
+
+#### Opção 3: Linha de Comando Individual
+
+```bash
+cd prova-aedi-unb/notebooks
+jupyter nbconvert --to html --execute Q1_Regressao_Linear.ipynb
+jupyter nbconvert --to html --execute Q2_Regressao_Logistica.ipynb
+jupyter nbconvert --to html --execute Q3_ANOVA.ipynb
+jupyter nbconvert --to html --execute Q4_ML_Avancado.ipynb
 ```
 
 ---
